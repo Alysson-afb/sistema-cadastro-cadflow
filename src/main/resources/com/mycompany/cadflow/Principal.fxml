@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--sdsadasd-->
+
+<TabPane tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cadflow.PrincipalController">
+   <tabs>
+      <Tab text="Gestão de Pessoas">
+         <content>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="688.0" prefWidth="1020.0">
+               <children>
+                  <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <ImageView fx:id="imgCadFlow" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@LogoCadFlow.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="txtTelaPrincipalCadFlow" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="507.0" text="Tela Principal CadFlow" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="200.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="60.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="281.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <TextField fx:id="txtPesquisa" prefHeight="25.0" prefWidth="190.0" promptText="Pesquisar NOME ou CPF..." />
+                                          <ComboBox fx:id="cbFiltroTipo" prefHeight="25.0" prefWidth="115.0" />
+                                          <CheckBox fx:id="chkMostrarInativos" mnemonicParsing="false" prefHeight="17.0" prefWidth="132.0" text="Mostrar inativos" />
+                                       </children>
+                                    </VBox>
+                                    <Region prefHeight="100.0" prefWidth="53.0" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="btnCadastroPessoa" minWidth="70.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="100.0" text="(+) Cadastro" />
+                                    <Button fx:id="btnFicha" minWidth="70.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Ficha" />
+                                    <Button fx:id="btnImprimir" minWidth="70.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Imprimir" />
+                                    <Button fx:id="btnEditar" minWidth="70.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Editar" />
+                                    <Button fx:id="btnExcluir" minWidth="70.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Excluir" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="429.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TableView fx:id="tableViewAcolhidos" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="419.0" prefWidth="789.0" HBox.hgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="tableViewAcolhidosCodigo" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" style="text-align: center;" text="Código" />
+                                  <TableColumn fx:id="tableViewAcolhidosNome" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="800.0" resizable="false" text="Nome" />
+                                    <TableColumn fx:id="tableViewAcolhidosStatus" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Acolhido?" />
+                                </columns>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Visão Geral">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="419.0" layoutY="144.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="1020.0" spacing="30.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="90.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #4CAF50; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label text="Acolhidos" />
+                                    <Label fx:id="lblNumAcolhidos" text="0">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="470.0" layoutY="10.0" prefHeight="90.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #4CAF50; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label text="Familiares" />
+                                    <Label fx:id="lblNumFamiliares" text="0">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="535.0" layoutY="10.0" prefHeight="90.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #4CAF50; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label text="Vagas disponíveis" />
+                                    <Label fx:id="lblVagasDisponiveis" text="0">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnAjustarCapacidade" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-underline: true; -fx-cursor: hand;" text="Alterar">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <PieChart fx:id="graficoSexo" prefHeight="400.0">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </PieChart>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
